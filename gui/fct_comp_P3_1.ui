@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fct_comp_P3_1</class>
+ <widget class="QDialog" name="fct_comp_P3_1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>491</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des inscriptions aux épreuves</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Permet de gérer les inscriptions des participants aux épreuves</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>&lt;b&gt;Inscrire des participants :&lt;/b&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label_forme_ep">
+       <property name="text">
+        <string>Forme de l'épreuve</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_forme_ep"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_cat_ep">
+       <property name="text">
+        <string>Catégorie de l'épreuve</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_cat_ep"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_numI">
+       <property name="text">
+        <string>Le(s) Participant(s) :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numIn"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>numéro de l'épreuve:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numEp"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add">
+       <property name="text">
+        <string>Inscrire</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Supprimer / Modifier des inscriptions :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_numIn_del">
+       <property name="text">
+        <string>Le(s) Participant(s) :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numIn_del"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_numEp_del">
+       <property name="text">
+        <string>numéro de l'épreuve :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numEp_del"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>nouvelle épreuve :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numEp_update"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="remove">
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="update">
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_fct_comp_7">
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>70</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>numIn</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>numEp</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_fct_comp_7">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>add</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>addParticipant()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>850</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remove</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>removeParticipant()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>729</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_cat_ep</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>refreshLists()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>-3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_forme_ep</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>refreshLists()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>585</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_numEp</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>refreshParticipantsLists()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>583</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_numIn_del</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>_refreshNumEpListDel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>update</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>updateParticipant()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>797</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>804</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_forme_ep</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>fct_comp_P3_1</receiver>
+   <slot>_refreshCatList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addParticipant()</slot>
+  <slot>removeParticipant()</slot>
+  <slot>refreshLists()</slot>
+  <slot>refreshParticipantsLists()</slot>
+  <slot>_refreshNumEpListDel()</slot>
+  <slot>updateParticipant()</slot>
+  <slot>_refreshCatList()</slot>
+ </slots>
+</ui>

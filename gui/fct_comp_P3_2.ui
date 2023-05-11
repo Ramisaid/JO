@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fct_comp_P3_2</class>
+ <widget class="QDialog" name="fct_comp_P3_2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Résultats</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Gestion de résultats des epreuves</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choix de l'epreuve et de la catégorie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_forme_ep">
+       <property name="text">
+        <string>Numero de l'epreuve</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_forme_ep"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="update_2">
+         <property name="text">
+          <string>Choisir</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Les medailles :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_numIn_del">
+       <property name="text">
+        <string>Gold</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numIn_del"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_numEp_del">
+       <property name="text">
+        <string>Silver</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numEp_del"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Bronze</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_numEp_update"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="update">
+       <property name="text">
+        <string>Inscription</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="remove">
+       <property name="text">
+        <string>Edition</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add">
+       <property name="text">
+        <string>Suppression</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_fct_comp_7">
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>70</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>numEp</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>gold</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>silver</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>bronze</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_fct_comp_7">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>update</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_2</receiver>
+   <slot>refreshResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>626</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>update_2</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_2</receiver>
+   <slot>refreshmedailles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>862</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remove</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_2</receiver>
+   <slot>refreshedit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>720</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>858</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>add</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_P3_2</receiver>
+   <slot>refreshdelete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>812</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>861</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addParticipant()</slot>
+  <slot>removeParticipant()</slot>
+  <slot>refreshLists()</slot>
+  <slot>refreshParticipantsLists()</slot>
+  <slot>_refreshNumEpListDel()</slot>
+  <slot>refreshResult()</slot>
+  <slot>refreshmedailles()</slot>
+  <slot>refreshedit()</slot>
+  <slot>refreshdelete()</slot>
+ </slots>
+</ui>
